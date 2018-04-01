@@ -2,7 +2,7 @@
   "name": "TicketMapper",
   "version": "1.0.0",
   "scripts": {
-    "heroku-postbuild": "cd client/ && npm install --only=dev --no-shrinkwrap && npm install && npm run build",
+    "heroku-postbuild": "cd client/ && npm install --only=dev --no-shrinkwrap && npm install",
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
