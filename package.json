@@ -2,6 +2,7 @@
   "name": "TicketMapper",
   "version": "1.0.0",
   "scripts": {
+    "heroku-postbuild": "cd client/ && npm install --only=dev --no-shrinkwrap && npm install && npm run build",
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
@@ -9,6 +10,10 @@
     "update-server": "npm install",
     "update": "concurrently --kill-others-on-fail \"yarn update-client\" \"yarn update-server\""
   },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "cookie-session": "^2.0.0-beta.3",
