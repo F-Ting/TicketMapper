@@ -26,7 +26,7 @@ module.exports = function() {
     })
   )
 
-  app.use(session({secret: 'dansnothot', saveUninitialized: false, resave: true, cookie: { maxAge: 1000 }}))
+  app.use(session({secret: 'dansnothot', saveUninitialized: false, resave: true, cookie: { maxAge: null }}))
 
   app.use(passport.initialize())
   app.use(passport.session())
